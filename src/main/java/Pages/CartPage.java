@@ -1,11 +1,16 @@
 package Pages;
 
+import java.time.Duration;
+import java.util.NoSuchElementException;
+
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 
-import io.cucumber.messages.types.Duration;
 
 public class CartPage {
 	WebDriver driver;//// WebDriver instance for interacting with the webpage
@@ -30,9 +35,9 @@ public class CartPage {
 	By addtocart = By.xpath("//a[@class='btn btn-success btn-lg']");
 	// navigating to cartpage
 	By cartpage = By.id("cartur");
-	// methods to interact with the elements
+	// methods to interact with the element
 
-	public void Phone() {
+   public void Phone() {
 		driver.findElement(Phones).click();
 		driver.findElement(selectedPhone).click();
 		driver.findElement(addtocart).click();

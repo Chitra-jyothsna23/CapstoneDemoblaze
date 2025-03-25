@@ -1,10 +1,13 @@
 package TestCase;
 
 import java.io.FileInputStream;
+
 import java.io.IOException;
 import java.time.Duration;
+import java.util.NoSuchElementException;
 import java.util.Properties;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -52,5 +55,6 @@ public class CartPageTest extends BaseClass {
 		ExtentReport.getInstance().flush();// saves the test report
 
 	}
+
 
 }

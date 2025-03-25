@@ -28,8 +28,7 @@ public class BaseClass {
 	@BeforeClass
 	@Parameters("browser") // Receives browser name from testng.xml
 	public void setup(String browser) {
-		
-		if (browser.equalsIgnoreCase("chrome")) {
+		if(browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("Edge")) {
 			driver = new EdgeDriver();
@@ -42,11 +41,9 @@ public class BaseClass {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		//driver.get("https://www.demoblaze.com/");
 	
-		 driver.manage().window().maximize();
-         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-         System.out.println("Browser setup completed: " + browser);
+		}		
      
- }
+ 
 	public void screenshot() throws WebDriverException, IOException {
 		File src = null;
 		src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

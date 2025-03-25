@@ -62,5 +62,8 @@ public class CheckOutPageTest extends BaseClass {
 		cop.ok();
 		//capturing the screen shot.
 		screenshot();
+		ExtentReport.createTest("Checkout").log(Status.PASS, "Checkout done Successfully");
+		ExtentReport.getInstance().flush();// saves the test report
+
 	}
 }

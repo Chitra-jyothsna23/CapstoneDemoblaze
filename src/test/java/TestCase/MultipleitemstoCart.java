@@ -51,7 +51,7 @@
 			c.cartPage();// Clicks on "Phones" category, selects a phone, and adds it to cart
 			Thread.sleep(3000);
 			screenshot();
-			ExtentReport.createTest("Cart").log(Status.PASS, "Add to cart Successfully");
+			ExtentReport.createTest("MultipleProductsCart").log(Status.PASS, "Add to cart Successfully");
 			ExtentReport.getInstance().flush();// saves the test report
 
 		}
