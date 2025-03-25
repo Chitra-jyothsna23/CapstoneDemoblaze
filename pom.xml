@@ -22,6 +22,17 @@
 			<version>4.29.0</version>
 		</dependency>
 		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>5.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>5.2.5</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.4.0</version>
@@ -47,6 +58,11 @@
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>5.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>2.29.1</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -76,13 +92,13 @@
 				<configuration>
 					<!--<includes>Testngdemo1.java</includes>-->
 					<suiteXmlFiles>
-						<suiteXmlFile>./xml/SignUpCucumber.xml</suiteXmlFile>
+						<suiteXmlFile>./xml/LoginTest.xml</suiteXmlFile>
 						<!--<suiteXmlFile>testng-suite.xml</suiteXmlFile>-->
 					</suiteXmlFiles>
 					<!--<includes>./cart/CartRunnerWrapper.class</includes>-->
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>net.masterthought</groupId>
 				<artifactId>maven-cucumber-reporting</artifactId>

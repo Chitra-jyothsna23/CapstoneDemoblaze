@@ -18,12 +18,9 @@ public class SignUpStepDef {
 
     @Before
     public void setup() {
-        driver = new ChromeDriver();// Launches the Chrome browser
-        driver.manage().window().maximize();// Maximizes the browser window
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));// Implicit wait for elements
-        driver.get("https://www.demoblaze.com/");
+    	this.driver = Hooks.driver;
         signUpPage = new SignUpPage(driver);// Initializes the SignUpPage object (POM)
-        signUpPage.Signuppage();//pens the Sign-Up
+        signUpPage.Signuppage();//calls the signup
     }
 
     @Given("User is on the Sign-Up page")
@@ -53,20 +50,8 @@ public class SignUpStepDef {
         signUpPage.SignUpButton();
     }
 
-    @Then("A success message should be displayed")
-    public void a_success_message_should_be_displayed() {
-        try {
-            Alert alert = driver.switchTo().alert();//switch to alert
-            System.out.println("Success Alert: " + alert.getText());//print the alert message
-            alert.accept();
-        } catch (Exception e) {
-            System.out.println("No success alert displayed: " + e.getMessage());
-            ExtentReport.createTest("Valid signup").info("User enters valid data");
-            ExtentReport.createTest("signup success").pass("signup is complete");
-            
-        }
-    }
-
+	
+	 
     @Then("An error message should be displayed")
     public void an_error_message_should_be_displayed() {
         try {
@@ -80,13 +65,8 @@ public class SignUpStepDef {
             
         }
     }
+    
+	 
 
-    @After
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-            ExtentReport.getInstance().flush();
-        }
-    }
 }
 

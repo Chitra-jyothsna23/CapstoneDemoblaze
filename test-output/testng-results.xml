@@ -2,62 +2,39 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-22T12:35:07 IST" name="Suite" finished-at="2025-03-22T12:35:20 IST" duration-ms="12888">
+  <suite started-at="2025-03-25T13:19:04 IST" name="Suite" finished-at="2025-03-25T13:19:18 IST" duration-ms="14398">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:myRunner.SignUpTestNGRunner@2ab4bc72]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-03-22T12:35:07 IST" name="Test" finished-at="2025-03-22T12:35:20 IST" duration-ms="12888">
-      <class name="myRunner.SignUpTestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:myRunner.SignUpTestNGRunner@2ab4bc72]" started-at="2025-03-22T12:35:07 IST" name="setUpClass" finished-at="2025-03-22T12:35:08 IST" duration-ms="614" status="PASS">
+    <test started-at="2025-03-25T13:19:04 IST" name="Test" finished-at="2025-03-25T13:19:18 IST" duration-ms="14398">
+      <class name="TestCase.CheckOutPageTest">
+        <test-method is-config="true" signature="readData()[pri:0, instance:TestCase.CheckOutPageTest@6d1ef78d]" started-at="2025-03-25T13:19:04 IST" name="readData" finished-at="2025-03-25T13:19:04 IST" duration-ms="192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readData -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:TestCase.CheckOutPageTest@6d1ef78d]" started-at="2025-03-25T13:19:04 IST" name="setup" finished-at="2025-03-25T13:19:08 IST" duration-ms="3996" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4f2d014a]]>
+                <![CDATA[firefox]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:myRunner.SignUpTestNGRunner@2ab4bc72]" started-at="2025-03-22T12:35:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-22T12:35:15 IST" duration-ms="6806" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Successful Sign-Up with Valid Credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign-Up Functionality"]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- setup -->
+        <test-method signature="Tc1()[pri:0, instance:TestCase.CheckOutPageTest@6d1ef78d]" started-at="2025-03-25T13:19:08 IST" name="Tc1" finished-at="2025-03-25T13:19:15 IST" duration-ms="6983" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:myRunner.SignUpTestNGRunner@2ab4bc72]" started-at="2025-03-22T12:35:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-22T12:35:20 IST" duration-ms="5391" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Unsuccessful Sign-Up with Invalid Credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign-Up Functionality"]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- Tc1 -->
+        <test-method signature="checkout()[pri:0, instance:TestCase.CheckOutPageTest@6d1ef78d]" started-at="2025-03-25T13:19:15 IST" name="checkout" finished-at="2025-03-25T13:19:17 IST" duration-ms="1760" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:myRunner.SignUpTestNGRunner@2ab4bc72]" started-at="2025-03-22T12:35:20 IST" name="tearDownClass" finished-at="2025-03-22T12:35:20 IST" duration-ms="11" status="PASS">
+        </test-method> <!-- checkout -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCase.CheckOutPageTest@6d1ef78d]" started-at="2025-03-25T13:19:17 IST" name="teardown" finished-at="2025-03-25T13:19:18 IST" duration-ms="1252" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- myRunner.SignUpTestNGRunner -->
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCase.CheckOutPageTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

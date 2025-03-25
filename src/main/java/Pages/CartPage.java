@@ -3,13 +3,18 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+
+import io.cucumber.messages.types.Duration;
 
 public class CartPage {
 	WebDriver driver;//// WebDriver instance for interacting with the webpage
 
 	public CartPage(WebDriver driver) {
 		this.driver = driver;// Assigns the passed WebDriver instance to the class
-	}
+		        
+    }
+	
 
 	// categories in the page
 	By Phones = By.xpath("(//a[@id ='itemc'])[1]");
@@ -45,8 +50,13 @@ public class CartPage {
 		driver.findElement(selectedMonitor).click();
 		driver.findElement(addtocart).click();
 	}
+	public void HomePage() {
+		driver.navigate().back();
+		driver.navigate().back();
+	}
 
 	public void cartPage() {
 		driver.findElement(cartpage).click();
 	}
+
 }

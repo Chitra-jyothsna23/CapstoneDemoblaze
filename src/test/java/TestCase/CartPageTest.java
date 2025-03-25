@@ -6,9 +6,11 @@ import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -24,6 +26,10 @@ public class CartPageTest extends BaseClass {
 	CartPage c;
 	String url;
 
+	 FluentWait<WebDriver> wait; // FluentWait instance
+
+	  
+
 	@BeforeTest
 	public void readData() throws IOException {
 		FileInputStream fis = new FileInputStream("src\\main\\java\\utils\\data.properties");
@@ -32,6 +38,11 @@ public class CartPageTest extends BaseClass {
 		url = prop.getProperty("url");
 		fis.close();
 		ExtentReport.getInstance();
+		// Initialize FluentWait for WebDriver (specific to CartPageTest)
+        wait =  new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(15))
+                .pollingEvery(Duration.ofSeconds(2))
+                .ignoring(Exception.class);
 	}
 
 	@Test
@@ -41,7 +52,8 @@ public class CartPageTest extends BaseClass {
 		c.Phone();
 		AlertHandling();// handle alert after adding to the cart
 		c.cartPage();// Clicks on "Phones" category, selects a phone, and adds it to cart
-		Thread.sleep(3000);
+		 // Replacing Thread.sleep(3000) with FluentWait
+        wait.until(d -> true);
 		screenshot();
 		ExtentReport.createTest("Cart").log(Status.PASS, "Add to cart Successfully");
 		ExtentReport.getInstance().flush();// saves the test report

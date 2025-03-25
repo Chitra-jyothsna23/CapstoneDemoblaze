@@ -56,7 +56,7 @@ public class BaseClass {
 		System.out.println(alert.getText());
 		alert.accept();
 		}catch(Exception e) {
-			System.out.println(e.getMessage());
+			System.out.println("No alert present");
 		}
 	}
 	@AfterClass
