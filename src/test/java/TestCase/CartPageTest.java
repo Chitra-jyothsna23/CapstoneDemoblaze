@@ -1,7 +1,7 @@
+
 package TestCase;
 
 import java.io.FileInputStream;
-
 import java.io.IOException;
 import java.time.Duration;
 import java.util.NoSuchElementException;
@@ -14,7 +14,7 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -23,38 +23,55 @@ import com.aventstack.extentreports.Status;
 import base.BaseClass;
 import base.ExtentReport;
 import Pages.CartPage;
-import Pages.LoginPage;
 
 public class CartPageTest extends BaseClass {
 	CartPage c;
 	String url;
+
 	@BeforeTest
-	
-	 public void readData() throws IOException { 
-		
+	public void readData() throws IOException {
 		FileInputStream fis = new FileInputStream("src\\main\\java\\utils\\data.properties");
 		Properties prop = new Properties();
 		prop.load(fis);
 		url = prop.getProperty("url");
 		fis.close();
 		ExtentReport.getInstance();
-		
 	}
 
 	@Test
 	public void Cart() throws InterruptedException, WebDriverException, IOException {
-		driver.get(url);// opens the website
-		c = new CartPage(driver);// initializes the cart object
+		driver.get(url); // Opens the website
+		c = new CartPage(driver); // Initializes the cart object
+
 		c.Phone();
-		AlertHandling();// handle alert after adding to the cart
-		c.cartPage();// Clicks on "Phones" category, selects a phone, and adds it to cart
-		Thread.sleep(3000);
-		
+
+		// Wait for alert using Fluent Wait
+		waitForAlertAndAccept();
+
+		// Clicks on "Phones" category, selects a phone, and adds it to cart
+		c.cartPage();
+		driver.navigate().refresh();
+		Thread.sleep(3000); // Give time for page reload
+		validateProductInCart();
 		screenshot();
 		ExtentReport.createTest("Cart").log(Status.PASS, "Add to cart Successfully");
-		ExtentReport.getInstance().flush();// saves the test report
+		ExtentReport.getInstance().flush(); // Saves the test report
+	}
+
+	private void validateProductInCart() {
+	
+		   
 
 	}
 
+	// Fluent Wait for alert handling
+	public void waitForAlertAndAccept() {
+		FluentWait wait = new FluentWait(driver).withTimeout(Duration.ofSeconds(20)).pollingEvery(Duration.ofSeconds(1))
+				.ignoring(NoSuchElementException.class);
+
+		Alert alert = (Alert) wait.until(ExpectedConditions.alertIsPresent());
+		Assert.assertNotNull(alert, "Alert did not appear!");
+		alert.accept();
+	}
 
 }

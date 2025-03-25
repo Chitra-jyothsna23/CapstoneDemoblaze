@@ -42,7 +42,7 @@ public class LoginTest extends BaseClass {
 		lp.LoginButton();
 		AlertHandling();
 		screenshot();
-		ExtentReport.createTest("Login").log(Status.PASS, "Login Successful");
+		ExtentReport.createTest("MultipleProductsCart").log(Status.PASS, "Add to cart Successfully");
 		ExtentReport.getInstance().flush();
 	}
 
