@@ -40,13 +40,13 @@ public class CheckOutPageTest extends BaseClass {
 		driver.get(url);
 		cp=new CartPage(driver);
 		// selecting the category phone and adding one of the products to the cart.
-		cp.Phone();
+		cp.phone();
 		// An alert appears when we add a product to cart we handle that alert.
 		AlertHandling();
 		//Navigating to home page.
-		cp.HomePage();
+		cp.backto();
 		//viewing the cart page.
-		cp.cartPage();
+		cp.cartpage();
 	}
 
 	@Test

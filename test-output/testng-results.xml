@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-25T21:02:54 IST" name="Suite" finished-at="2025-03-25T21:03:08 IST" duration-ms="13620">
+  <suite started-at="2025-03-26T10:37:39 IST" name="Suite" finished-at="2025-03-26T10:38:51 IST" duration-ms="72184">
     <groups>
     </groups>
-    <test started-at="2025-03-25T21:02:54 IST" name="Test" finished-at="2025-03-25T21:03:08 IST" duration-ms="13620">
-      <class name="TestCase.CartPageTest">
-        <test-method is-config="true" signature="readData()[pri:0, instance:TestCase.CartPageTest@6d1ef78d]" started-at="2025-03-25T21:02:54 IST" name="readData" finished-at="2025-03-25T21:02:54 IST" duration-ms="175" status="PASS">
+    <test started-at="2025-03-26T10:37:39 IST" name="Test" finished-at="2025-03-26T10:38:51 IST" duration-ms="72184">
+      <class name="TestCase.CheckOutPageTest">
+        <test-method is-config="true" signature="readData()[pri:0, instance:TestCase.CheckOutPageTest@1941a8ff]" started-at="2025-03-26T10:37:40 IST" name="readData" finished-at="2025-03-26T10:37:40 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readData -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:TestCase.CartPageTest@6d1ef78d]" started-at="2025-03-25T21:02:54 IST" name="setup" finished-at="2025-03-25T21:02:56 IST" duration-ms="1532" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:TestCase.CheckOutPageTest@1941a8ff]" started-at="2025-03-26T10:38:33 IST" name="setup" finished-at="2025-03-26T10:38:34 IST" duration-ms="1492" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,11 +22,136 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Cart()[pri:0, instance:TestCase.CartPageTest@6d1ef78d]" started-at="2025-03-25T21:02:56 IST" name="Cart" finished-at="2025-03-25T21:03:07 IST" duration-ms="11298" status="PASS">
+        <test-method signature="Tc1()[pri:0, instance:TestCase.CheckOutPageTest@1941a8ff]" started-at="2025-03-26T10:38:34 IST" name="Tc1" finished-at="2025-03-26T10:38:41 IST" duration-ms="6782" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc1 -->
+        <test-method signature="checkout()[pri:0, instance:TestCase.CheckOutPageTest@1941a8ff]" started-at="2025-03-26T10:38:41 IST" name="checkout" finished-at="2025-03-26T10:38:43 IST" duration-ms="2467" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkout -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCase.CheckOutPageTest@1941a8ff]" started-at="2025-03-26T10:38:43 IST" name="teardown" finished-at="2025-03-26T10:38:44 IST" duration-ms="478" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCase.CheckOutPageTest -->
+      <class name="TestCase.MultipleitemstoCart">
+        <test-method is-config="true" signature="readData()[pri:0, instance:TestCase.MultipleitemstoCart@3a12c404]" started-at="2025-03-26T10:37:40 IST" name="readData" finished-at="2025-03-26T10:37:40 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readData -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:TestCase.MultipleitemstoCart@3a12c404]" started-at="2025-03-26T10:38:11 IST" name="setup" finished-at="2025-03-26T10:38:12 IST" duration-ms="1297" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="Cart()[pri:0, instance:TestCase.MultipleitemstoCart@3a12c404]" started-at="2025-03-26T10:38:12 IST" name="Cart" finished-at="2025-03-26T10:38:32 IST" duration-ms="20299" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Cart -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCase.CartPageTest@6d1ef78d]" started-at="2025-03-25T21:03:07 IST" name="teardown" finished-at="2025-03-25T21:03:08 IST" duration-ms="372" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCase.MultipleitemstoCart@3a12c404]" started-at="2025-03-26T10:38:32 IST" name="teardown" finished-at="2025-03-26T10:38:33 IST" duration-ms="492" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCase.MultipleitemstoCart -->
+      <class name="TestCase.SignUpTest">
+        <test-method is-config="true" signature="readData()[pri:0, instance:TestCase.SignUpTest@134d26af]" started-at="2025-03-26T10:37:40 IST" name="readData" finished-at="2025-03-26T10:37:40 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readData -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:TestCase.SignUpTest@134d26af]" started-at="2025-03-26T10:37:40 IST" name="setup" finished-at="2025-03-26T10:37:43 IST" duration-ms="3855" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="SignUpPageMethod()[pri:0, instance:TestCase.SignUpTest@134d26af]" started-at="2025-03-26T10:37:44 IST" name="SignUpPageMethod" finished-at="2025-03-26T10:37:51 IST" duration-ms="7652" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignUpPageMethod -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCase.SignUpTest@134d26af]" started-at="2025-03-26T10:37:51 IST" name="teardown" finished-at="2025-03-26T10:37:52 IST" duration-ms="488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCase.SignUpTest -->
+      <class name="TestCase.LoginTest">
+        <test-method is-config="true" signature="readData()[pri:0, instance:TestCase.LoginTest@517d4a0d]" started-at="2025-03-26T10:37:40 IST" name="readData" finished-at="2025-03-26T10:37:40 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readData -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:TestCase.LoginTest@517d4a0d]" started-at="2025-03-26T10:37:52 IST" name="setup" finished-at="2025-03-26T10:37:53 IST" duration-ms="1390" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="Login()[pri:0, instance:TestCase.LoginTest@517d4a0d]" started-at="2025-03-26T10:37:53 IST" name="Login" finished-at="2025-03-26T10:37:59 IST" duration-ms="5422" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCase.LoginTest@517d4a0d]" started-at="2025-03-26T10:37:59 IST" name="teardown" finished-at="2025-03-26T10:37:59 IST" duration-ms="516" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCase.LoginTest -->
+      <class name="TestCase.LoginInvalid">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:TestCase.LoginInvalid@22d7b4f8]" started-at="2025-03-26T10:38:44 IST" name="setup" finished-at="2025-03-26T10:38:45 IST" duration-ms="1313" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="LoginInvalid()[pri:0, instance:TestCase.LoginInvalid@22d7b4f8]" started-at="2025-03-26T10:38:45 IST" name="LoginInvalid" finished-at="2025-03-26T10:38:51 IST" duration-ms="5640" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginInvalid -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCase.LoginInvalid@22d7b4f8]" started-at="2025-03-26T10:38:51 IST" name="teardown" finished-at="2025-03-26T10:38:51 IST" duration-ms="538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCase.LoginInvalid -->
+      <class name="TestCase.CartPageTest">
+        <test-method is-config="true" signature="readData()[pri:0, instance:TestCase.CartPageTest@7862f56]" started-at="2025-03-26T10:37:39 IST" name="readData" finished-at="2025-03-26T10:37:40 IST" duration-ms="282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readData -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:TestCase.CartPageTest@7862f56]" started-at="2025-03-26T10:37:59 IST" name="setup" finished-at="2025-03-26T10:38:01 IST" duration-ms="1337" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="Cart()[pri:0, instance:TestCase.CartPageTest@7862f56]" started-at="2025-03-26T10:38:01 IST" name="Cart" finished-at="2025-03-26T10:38:10 IST" duration-ms="9596" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cart -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCase.CartPageTest@7862f56]" started-at="2025-03-26T10:38:10 IST" name="teardown" finished-at="2025-03-26T10:38:11 IST" duration-ms="449" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

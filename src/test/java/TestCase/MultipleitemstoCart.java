@@ -39,16 +39,16 @@
 		public void Cart() throws InterruptedException, WebDriverException, IOException {
 			driver.get(url);// opens the website
 			c = new CartPage(driver);// initializes the cart object
-			c.Phone();
+			c.phone();
 			AlertHandling();// handle alert after adding to the cart
-			c.HomePage();
-			c.Laptop();
+			c.backto();
+			c.laptops();
 			AlertHandling();
-			c.HomePage();
-			c.Monitor();
+			c.backto();
+			c.monitors();
 			AlertHandling();
-			c.HomePage();
-			c.cartPage();// Clicks on "Phones" category, selects a phone, and adds it to cart
+			c.backto();
+			c.cartpage();// Clicks on "Phones" category, selects a phone, and adds it to cart
 			Thread.sleep(3000);
 			screenshot();
 			ExtentReport.createTest("MultipleProductsCart").log(Status.PASS, "Add to cart Successfully");

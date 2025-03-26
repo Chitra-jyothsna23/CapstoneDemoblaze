@@ -43,35 +43,15 @@ public class CartPageTest extends BaseClass {
 		driver.get(url); // Opens the website
 		c = new CartPage(driver); // Initializes the cart object
 
-		c.Phone();
-
-		// Wait for alert using Fluent Wait
-		waitForAlertAndAccept();
+		c.phone();
 
 		// Clicks on "Phones" category, selects a phone, and adds it to cart
-		c.cartPage();
+		c.cartpage();
 		driver.navigate().refresh();
 		Thread.sleep(3000); // Give time for page reload
-		validateProductInCart();
+		
 		screenshot();
 		ExtentReport.createTest("Cart").log(Status.PASS, "Add to cart Successfully");
 		ExtentReport.getInstance().flush(); // Saves the test report
 	}
-
-	private void validateProductInCart() {
-	
-		   
-
-	}
-
-	// Fluent Wait for alert handling
-	public void waitForAlertAndAccept() {
-		FluentWait wait = new FluentWait(driver).withTimeout(Duration.ofSeconds(20)).pollingEvery(Duration.ofSeconds(1))
-				.ignoring(NoSuchElementException.class);
-
-		Alert alert = (Alert) wait.until(ExpectedConditions.alertIsPresent());
-		Assert.assertNotNull(alert, "Alert did not appear!");
-		alert.accept();
-	}
-
 }
